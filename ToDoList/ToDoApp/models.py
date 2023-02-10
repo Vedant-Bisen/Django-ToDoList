@@ -3,8 +3,16 @@ from django.db import models
 # Create your models here.
 
 class ToDoList(models.Model):
-    item = models.CharField(max_length=200)
-    completed = models.BooleanField(default=False)
+    name = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.item + " | " + str(self.completed)
+        return self.name
+    
+class Item(models.Model):
+    toDoList = models.ForeignKey(ToDoList, default=None, on_delete=models.CASCADE)
+    text = models.CharField(max_length=300)
+    complete = models.BooleanField(default=False)
+    
+
+    def __str__(self):
+        return self.text
