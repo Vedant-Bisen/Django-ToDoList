@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+
+{% block title %}Create new list{%endblock%}
+
+{% block content %}
+Create new list
+
+<form method="post" action="/create/">
+    {{form}}
+    <button type="submit", name="save">Create</button>
+</form>
+
+{% endblock %}
+
+
