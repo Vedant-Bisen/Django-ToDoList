@@ -6,8 +6,9 @@
 Create new list
 
 <form method="post" action="/create/">
-    {{form}}
-    <button type="submit", name="save">Create</button>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit", name="save">Create New</button>
 </form>
 
 {% endblock %}
