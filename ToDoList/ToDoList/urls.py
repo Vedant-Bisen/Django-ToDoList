@@ -21,4 +21,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("register/", v.registerPage, name="register"),
     path("", include("ToDoApp.urls")),
+    path("", include("django.contrib.auth.urls")),
 ]

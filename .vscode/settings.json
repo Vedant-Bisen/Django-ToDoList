@@ -1,4 +1,7 @@
 {
-    "python.formatting.provider": "black",
-    "files.autoSave": "afterDelay"
+  "python.formatting.provider": "black",
+  "files.autoSave": "afterDelay",
+  "python.testing.pytestArgs": ["ToDoList"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
 }
