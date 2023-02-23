@@ -41,5 +41,5 @@ def create(response):
         return HttpResponseRedirect("/%i" %t.id)
     else:
         form = CreateNewList()
-        
+
     return render(response, "main/create.html", {"form": form})
