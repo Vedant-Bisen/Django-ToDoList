@@ -46,5 +46,6 @@ def create(response):
 
     return render(response, "main/create.html", {"form": form})
 
+
 def view(response):
     return render(response, "main/view.html", {})
