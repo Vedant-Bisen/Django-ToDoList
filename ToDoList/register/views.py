@@ -1,16 +1,16 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
-from django.contrib.auth.forms import UserCreationForm
+from .forms import registerForm
 
 # Create your views here.
 
+
 def registerPage(response):
     if response.method == "POST":
-        form = UserCreationForm(response.POST)
+        form = registerForm(response.POST)
         if form.is_valid():
             form.save()
         return redirect("/home/")
     else:
-        form = UserCreationForm()
+        form = registerForm()
 
-    return render(response, "register/register.html",{ "form": form})
+    return render(response, "register/register.html", {"form": form})
